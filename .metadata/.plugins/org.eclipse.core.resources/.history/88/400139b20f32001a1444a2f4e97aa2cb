@@ -32,6 +32,7 @@ public class HarGeneration {
 			if (!fl.exists()) {
 				fl.mkdir();
 			}
+			String absPath = fl.getAbsolutePath();
 
 			//BrowserMobProxy
 			BrowserMobProxy server = new BrowserMobProxyServer();

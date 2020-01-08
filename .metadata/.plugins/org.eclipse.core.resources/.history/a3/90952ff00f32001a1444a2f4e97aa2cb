@@ -9,10 +9,7 @@ public class App
     {
     	try {
 			int getIterationNumber = Integer.parseInt(GetUserValues.properties("iterationNumber"));
-			for (int i = 0; i < getIterationNumber; i++) {
-				HarGeneration.GenerateHar();
-			}
-			
+			HarGeneration.GenerateHar();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

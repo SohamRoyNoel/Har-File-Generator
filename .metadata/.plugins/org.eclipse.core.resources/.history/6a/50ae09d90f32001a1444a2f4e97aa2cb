@@ -8,11 +8,8 @@ public class App
     public static void main( String[] args )
     {
     	try {
-			int getIterationNumber = Integer.parseInt(GetUserValues.properties("iterationNumber"));
-			for (int i = 0; i < getIterationNumber; i++) {
-				HarGeneration.GenerateHar();
-			}
-			
+			String getIterationNumber = GetUserValues.properties("iterationNumber");
+			HarGeneration.GenerateHar();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
