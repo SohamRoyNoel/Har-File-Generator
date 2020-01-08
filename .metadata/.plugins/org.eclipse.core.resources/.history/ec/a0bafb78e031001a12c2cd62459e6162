@@ -1,0 +1,9 @@
+package HarGenerator.PerformanceFrameWork.Resources;
+
+
+public class ResourcePaths {
+	
+	public static String driverType= /*"webdriver.ie.driver"*/"webdriver.chrome.driver";
+	public static String driverLocation= /*"E:\\Jars\\IEDriverServer.exe"*/;
+	public static String interactableFile= "E:\\ME as QA\\Performance_Framework\\UserInteractable.properties";
+}

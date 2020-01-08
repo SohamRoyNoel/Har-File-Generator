@@ -1,0 +1,9 @@
+package HarGenerator.PerformanceFrameWork.Resources;
+
+
+public class ResourcePaths {
+	
+	public static String driverType= ;
+	public static String driverLocation= ;
+
+}

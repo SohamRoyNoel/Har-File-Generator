@@ -1,0 +1,32 @@
+package HarGenerator.PerformanceFrameWork.GenerateHar;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import HarGenerator.PerformanceFrameWork.Resources.GetUserValues;
+import HarGenerator.PerformanceFrameWork.Resources.ResourcePaths;
+import net.lightbody.bmp.BrowserMobProxy;
+import net.lightbody.bmp.BrowserMobProxyServer;
+import net.lightbody.bmp.proxy.CaptureType;
+
+public class HarGeneration {
+	
+	public static void GenerateHar() {
+		
+		 //BrowserMobProxy
+        BrowserMobProxy server = new BrowserMobProxyServer();
+        server.start(0);
+        server.setHarCaptureTypes(CaptureType.getAllContentCaptureTypes());
+        server.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
+        server.newHar("Google");
+		
+		System.setProperty(ResourcePaths.driverType,ResourcePaths.driverLocation);
+		WebDriver driver = new InternetExplorerDriver(); /*new ChromeDriver()*/; 
+		System.out.println("Hello");
+		try {
+			driver.get(GetUserValues.properties("urlTobeRedirected"));
+		} catch (Exception e) {	}
+	}
+
+}

@@ -1,0 +1,15 @@
+package HarGenerator.PerformanceFrameWork.Drivers;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class DriverInstance {
+	
+	public static WebDriver getWebDriver() {
+		System.setProperty("webdriver.ie.driver","E:\\Jars\\IEDriverServer.exe");
+		WebDriver driver = new InternetExplorerDriver();  
+		return driver;
+	}
+
+	
+}

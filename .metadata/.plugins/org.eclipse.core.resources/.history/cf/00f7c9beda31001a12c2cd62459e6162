@@ -1,0 +1,9 @@
+package HarGenerator.PerformanceFrameWork.GenerateHar;
+
+public class HarGeneration {
+	
+	public static void GenerateHar() {
+		
+	}
+
+}

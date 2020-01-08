@@ -1,0 +1,22 @@
+package HarGenerator.PerformanceFrameWork.GenerateHar;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import HarGenerator.PerformanceFrameWork.Resources.GetUserValues;
+import HarGenerator.PerformanceFrameWork.Resources.ResourcePaths;
+
+public class HarGeneration {
+	
+	public static void GenerateHar() {
+		
+		System.setProperty(ResourcePaths.driverType,ResourcePaths.driverLocation);
+		WebDriver driver = /*new InternetExplorerDriver();*/ new ChromeDriver(); 
+		System.out.println("Hello");
+		try {
+			driver.get(GetUserValues.properties("urlTobeRedirected"));
+		} catch (Exception e) {	}
+	}
+
+}
