@@ -1,0 +1,48 @@
+package HarGenerator.PerformanceFrameWork;
+
+import HarGenerator.PerformanceFrameWork.GenerateHar.HarGeneration;
+import HarGenerator.PerformanceFrameWork.Resources.GetUserValues;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	
+    	try {
+			String urls = GetUserValues.properties("urlTobeRedirected");
+			String uniqueKeys = GetUserValues.properties("provideUniqueKey");
+			String iterators = GetUserValues.properties("iterationNumber");
+			String[] TempURLS = urls.split(",");
+			String[] TempKeys = uniqueKeys.split(",");
+			String[] TempIterators = iterators.split(",");
+			
+			if (TempKeys.length==TempURLS.length && TempKeys.length == TempIterators.length) {
+				for (int i = 0; i < TempKeys.length; i++) {
+					String url = TempURLS[i];
+					String keys = TempKeys[i];
+					int itrs = Integer.parseInt(TempIterators[i]);
+					// Iteration Number Counter
+//					int getIterationNumber = Integer.parseInt(GetUserValues.properties("iterationNumber"));
+//					for (int j = 0; j < itrs; j++) {
+//						HarGeneration.GenerateHar(url, keys);
+//					}
+					System.out.println(keys);
+				}
+			}
+			
+			
+		} catch (Exception e) {
+
+		}
+    	
+    	/*try {
+			int getIterationNumber = Integer.parseInt(GetUserValues.properties("iterationNumber"));
+			for (int i = 0; i < getIterationNumber; i++) {
+				HarGeneration.GenerateHar();
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+    }
+}

@@ -25,10 +25,10 @@ import net.lightbody.bmp.proxy.CaptureType;
 
 public class HarGeneration {
 
-	public static void GenerateHar() {
+	public static void GenerateHar(String url, String keys) {
 
 		try {
-			File fl = new File("E:\\ME as QA\\Performance_Framework\\"+GetUserValues.properties("provideUniqueKey"));
+			File fl = new File("E:\\ME as QA\\Performance_Framework\\Results\\"+ keys);
 			if (!fl.exists()) {
 				fl.mkdir();
 			}
@@ -54,12 +54,12 @@ public class HarGeneration {
 
 			WebDriver driver = new PhantomJSDriver(capabilities);
 			try {
-				driver.get(GetUserValues.properties("urlTobeRedirected"));
+				driver.get(url);
 				String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(Calendar.getInstance().getTime());
 				//HAR
 				Har har = server.getHar();
-				String FileName = "_"+GetUserValues.properties("provideUniqueKey")+".har";
-				FileOutputStream fos = new FileOutputStream("E:\\ME as QA\\Performance_Framework\\"+GetUserValues.properties("provideUniqueKey")+"\\"+timeStamp+FileName);
+				String FileName = "_"+keys+".har";
+				FileOutputStream fos = new FileOutputStream("E:\\ME as QA\\Performance_Framework\\Results\\"+keys+"\\"+timeStamp+FileName);
 				har.writeTo(fos);
 				System.out.println("Done");
 				server.stop();

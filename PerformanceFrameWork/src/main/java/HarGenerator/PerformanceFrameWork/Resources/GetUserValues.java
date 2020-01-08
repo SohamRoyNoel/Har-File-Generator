@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class GetUserValues {
-	
+
 	public static String properties(String key) throws Exception {
 		File fl = new File(ResourcePaths.interactableFile);
 		FileInputStream file = new FileInputStream(fl);
@@ -14,6 +14,6 @@ public class GetUserValues {
 		String data = rpop.getProperty(key);
 		return data;
 
-}
+	}
 
 }
