@@ -9,9 +9,21 @@
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="HarGenerator.PerformanceFrameWork.Resources.ResourcePaths"/>
-<fullyQualifiedTypeName name="HarGenerator.PerformanceFrameWork.Resources.GetUserValues"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.remote.CapabilityType"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Proxy"/>
+<fullyQualifiedTypeName name="net.lightbody.bmp.BrowserMobProxy"/>
+<fullyQualifiedTypeName name="net.lightbody.bmp.BrowserMobProxyServer"/>
+<fullyQualifiedTypeName name="net.lightbody.bmp.proxy.CaptureType"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.CapabilityType"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.phantomjs.PhantomJSDriverService"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.phantomjs.PhantomJSDriver"/>
+<fullyQualifiedTypeName name="net.lightbody.bmp.core.har.Har"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="HarGenerator.PerformanceFrameWork.Resources.GetUserValues"/>
+<fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
 </qualifiedTypeNameHistroy>
